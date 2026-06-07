@@ -11,7 +11,7 @@ export default function FAQ() {
           <Link to="/" className="flex items-center gap-3">
 
             <img
-              src="/logo.png"
+              src="/favicon.ico"
               alt="LicenciaShop"
               className="w-12 h-12 object-contain"
             />
