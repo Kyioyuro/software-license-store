@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function LicenciaShopLanding() {
 const products = [
   {
@@ -52,7 +53,7 @@ Precio: ${product.price}
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img
-              src="/logo.png"
+              src="/favicon.ico"
               alt="LicenciaShop"
               className="w-12 h-12 object-contain"
             />
@@ -65,16 +66,41 @@ Precio: ${product.price}
             </div>
           </div>
 
-         <a
-            href={`https://wa.me/${phone}?text=${encodeURIComponent(
-              'Hola, quiero información sobre licencias y soporte técnico.'
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-green-500 hover:bg-green-400 transition px-5 py-2 rounded-2xl font-semibold"
-          >
-            WhatsApp
-          </a>
+          <div className="flex items-center gap-6">
+            <Link
+              to="/"
+              className="hover:text-green-400 transition"
+            >
+              Inicio
+            </Link>
+
+            <Link
+              to="/preguntas-frecuentes"
+              className="hover:text-green-400 transition"
+            >
+              FAQ
+            </Link>
+
+
+            <Link
+              to="/contacto"
+              className="hover:text-green-400 transition"
+            >
+              Contacto
+            </Link>
+
+            <a
+              href={`https://wa.me/${phone}?text=${encodeURIComponent(
+                'Hola, quiero información sobre licencias y soporte técnico.'
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 hover:bg-green-400 transition px-5 py-2 rounded-2xl font-semibold"
+            >
+              WhatsApp
+            </a>
+
+          </div>
         </div>
       </header>
 
