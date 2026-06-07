@@ -1,7 +1,11 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/contacto",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/preguntas-frecuentes",
       "destination": "/index.html"
     }
   ]
