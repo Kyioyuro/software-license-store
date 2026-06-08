@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 export default function LicenciaShopLanding() {
 const products = [
@@ -33,7 +34,8 @@ const products = [
     'Asistencia para empresas'
   ];
 
-  const phone = '522218288063';
+const [menuOpen, setMenuOpen] = useState(false);
+const phone = '522218288063';
 
 const getWhatsAppLink = (product) => {
   const message = `Hola, vi ${product.name} en LicenciaShop y me interesa adquirirlo.
@@ -48,8 +50,8 @@ Precio: ${product.price}
 
   return (
     <div className="min-h-screen bg-zinc-950 text-white">
-      {/* HEADER */}
-      <header className="border-b border-zinc-800 sticky top-0 bg-zinc-950/90 backdrop-blur z-50">
+      {/* HEADER */} 
+      <header className="relative border-b border-zinc-800 sticky top-0 bg-zinc-950/90 backdrop-blur z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img
@@ -66,7 +68,7 @@ Precio: ${product.price}
             </div>
           </div>
 
-          <div className="flex items-center gap-2 md:gap-8 text-xs md:text-base">
+          <div className="hidden md:flex items-center gap-8 text-base">
             <Link
               to="/"
               className="hover:text-green-400 transition"
@@ -101,12 +103,59 @@ Precio: ${product.price}
               </span>
 
               <span className="md:hidden">
-                WA
+                W
               </span>
             </a>
 
           </div>
+          <div className="md:hidden flex items-center gap-3">
+
+            <a
+              href={`https://wa.me/${phone}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 px-3 py-2 rounded-xl font-semibold"
+            >
+              WA
+            </a>
+
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="text-2xl"
+            >
+              ☰
+            </button>
+
+          </div>
         </div>
+        {menuOpen && (
+        <div className="md:hidden absolute right-4 top-full mt-2 bg-zinc-900 border border-zinc-800 rounded-xl shadow-lg">
+          <nav className="flex flex-col p-4 gap-3 min-w-[180px]">
+
+            <Link
+              to="/"
+              onClick={() => setMenuOpen(false)}
+            >
+              Inicio
+            </Link>
+
+            <Link
+              to="/preguntas-frecuentes"
+              onClick={() => setMenuOpen(false)}
+            >
+              FAQ
+            </Link>
+
+            <Link
+              to="/contacto"
+              onClick={() => setMenuOpen(false)}
+            >
+              Contacto
+            </Link>
+
+          </nav>
+        </div>
+      )}
       </header>
 
       {/* HERO */}
