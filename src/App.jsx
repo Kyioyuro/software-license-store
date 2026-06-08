@@ -103,7 +103,7 @@ Precio: ${product.price}
               </span>
 
               <span className="md:hidden">
-                W
+                WhatsApp
               </span>
             </a>
 
@@ -116,7 +116,7 @@ Precio: ${product.price}
               rel="noopener noreferrer"
               className="bg-green-500 px-3 py-2 rounded-xl font-semibold"
             >
-              WA
+              WhatsApp
             </a>
 
             <button
