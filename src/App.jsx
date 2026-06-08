@@ -58,7 +58,7 @@ Precio: ${product.price}
               className="w-8 h-8 md:w-12 md:h-12 object-contain"
             />
             <div>
-              <h1 className="text-2xl font-bold">LicenciaShop</h1>
+              <h1 className="text-xl md:text-2xl font-bold">LicenciaShop</h1>
 
               <p className="hidden md:block text-sm text-zinc-400">
                 Licencias y soporte técnico
@@ -66,7 +66,7 @@ Precio: ${product.price}
             </div>
           </div>
 
-          <div className="flex gap-3 md:gap-8">
+          <div className="flex items-center gap-2 md:gap-8 text-xs md:text-base">
             <Link
               to="/"
               className="hover:text-green-400 transition"
@@ -95,8 +95,7 @@ Precio: ${product.price}
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-500 hover:bg-green-400 transition px-5 py-2 rounded-2xl font-semibold"
-            >
+              className="bg-green-500 hover:bg-green-400 transition px-3 md:px-5 py-2 rounded-2xl font-semibold">
               <span className="hidden md:inline">
                 WhatsApp
               </span>
