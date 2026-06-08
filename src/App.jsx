@@ -55,18 +55,18 @@ Precio: ${product.price}
             <img
               src="/favicon.ico"
               alt="LicenciaShop"
-              className="w-12 h-12 object-contain"
+              className="w-8 h-8 md:w-12 md:h-12 object-contain"
             />
             <div>
               <h1 className="text-2xl font-bold">LicenciaShop</h1>
 
-              <p className="text-sm text-zinc-400">
+              <p className="hidden md:block text-sm text-zinc-400">
                 Licencias y soporte técnico
               </p>
             </div>
           </div>
 
-          <div className="flex items-center gap-6">
+          <div className="flex gap-3 md:gap-8">
             <Link
               to="/"
               className="hover:text-green-400 transition"
@@ -97,7 +97,13 @@ Precio: ${product.price}
               rel="noopener noreferrer"
               className="bg-green-500 hover:bg-green-400 transition px-5 py-2 rounded-2xl font-semibold"
             >
-              WhatsApp
+              <span className="hidden md:inline">
+                WhatsApp
+              </span>
+
+              <span className="md:hidden">
+                WA
+              </span>
             </a>
 
           </div>
